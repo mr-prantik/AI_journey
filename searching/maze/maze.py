@@ -124,7 +124,7 @@ class Maze():
 
         # Initialize frontier to just the starting position
         start = Node(state=self.start, parent=None, action=None)
-        frontier = StackFrontier()
+        frontier = QueueFrontier()
         frontier.add(start)
 
         # Initialize an empty explored set
@@ -164,7 +164,7 @@ class Maze():
                     frontier.add(child)
 
 
-    def output_image(self, filename, show_solution=True, show_explored=False):
+    def output_image(self, filename, show_solution=True, show_explored=True):
         from PIL import Image, ImageDraw
         cell_size = 50
         cell_border = 2
