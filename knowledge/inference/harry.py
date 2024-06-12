@@ -12,3 +12,5 @@ knowledge = And(
 )
 
 print(model_check(knowledge, rain))
+
+#print(knowledge.formula())
